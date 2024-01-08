@@ -20,7 +20,7 @@ class AppModule {
     @Provides
     @Singleton
     fun getRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder()
-        .baseUrl("https://reqres.in")
+        .baseUrl("https://internship-service.onrender.com")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
