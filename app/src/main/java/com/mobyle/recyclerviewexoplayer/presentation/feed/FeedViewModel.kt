@@ -27,7 +27,7 @@ class FeedViewModel @Inject constructor(private val getFeedUseCase: GetFeed) : B
 
             _uiState.postValue(FeedUiState.FeedSuccess(result.posts))
         } catch (_: Exception) {
-            _uiState.postValue(FeedUiState.FeedLoading)
+            _uiState.postValue(FeedUiState.FeedError)
         }
     }
 
