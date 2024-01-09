@@ -13,6 +13,13 @@ class FeedRepositoryImpl @Inject constructor(private val remoteDataSource: FeedR
 
         return PostListing(
             offset = response.offset,
-            posts = response.posts.map { Post(postId = it.postId, videoUrl = it.video.mediaUrl) })
+            posts = response.posts.map {
+                val video = it.video
+                Post(
+                    postId = it.postId,
+                    videoUrl = video.mediaUrl,
+                    thumbnailUrl = video.thumbnailUrl
+                )
+            })
     }
 }

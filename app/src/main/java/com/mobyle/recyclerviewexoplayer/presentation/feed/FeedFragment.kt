@@ -73,7 +73,7 @@ class FeedFragment : Fragment() {
                 snapHelper,
                 SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL_STATE_IDLE
             ) {
-                Log.d("HelpMe", it.toString())
+                setPositionText(it)
             }
 
             attachSnapHelperWithListener(
@@ -83,5 +83,9 @@ class FeedFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = postsAdapter
         }
+    }
+
+    private fun setPositionText(position: Int) {
+        postsAdapter.setPositionText(position)
     }
 }

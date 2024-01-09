@@ -42,6 +42,9 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
 
+    // Coil
+    implementation 'io.coil-kt:coil:2.5.0'
+
     //Exoplayer
     implementation 'androidx.media3:media3-exoplayer:1.2.0'
     implementation 'androidx.media3:media3-exoplayer-dash:1.2.0'
@@ -52,7 +55,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 
-// ViewModel
+    // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0-rc02"
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0-rc02"

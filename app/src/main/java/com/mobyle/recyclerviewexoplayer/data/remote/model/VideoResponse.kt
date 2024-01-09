@@ -5,4 +5,6 @@ import com.google.gson.annotations.SerializedName
 data class VideoResponse(
     @SerializedName("mediaUrl")
     val mediaUrl: String,
+    @SerializedName("thumbnail")
+    val thumbnailUrl: String,
 )
