@@ -18,14 +18,16 @@ class FeedViewModel @Inject constructor(private val getFeedUseCase: GetFeed) : B
     val uiState: LiveData<FeedUiState> = _uiState
 
     private var page = 0
+    val postsList = mutableListOf<Post>()
 
     fun getFeed() = launch {
         _uiState.postValue(FeedUiState.FeedLoading)
 
         try {
             val result = getFeedUseCase.invoke(page)
-
-            _uiState.postValue(FeedUiState.FeedSuccess(result.posts))
+            postsList.clear()
+            postsList.addAll(result.posts)
+            _uiState.postValue(FeedUiState.FeedSuccess(postsList))
         } catch (_: Exception) {
             _uiState.postValue(FeedUiState.FeedError)
         }

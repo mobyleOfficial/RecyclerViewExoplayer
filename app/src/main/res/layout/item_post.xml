@@ -2,8 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/video_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:auto_show="false"
+        app:controller_layout_id="@layout/exoplayer_controller"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:resize_mode="zoom"
+        app:show_buffering="never"
+        app:show_timeout="0"
+        app:surface_type="texture_view"
+        app:use_controller="true" >
+    </androidx.media3.ui.PlayerView>
 
     <ImageView
         android:id="@+id/iv_thumbnail"
@@ -11,18 +30,4 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/tv_id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/black"
-        android:textColor="@color/white"
-        android:gravity="center"
-        tools:text="Id" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
