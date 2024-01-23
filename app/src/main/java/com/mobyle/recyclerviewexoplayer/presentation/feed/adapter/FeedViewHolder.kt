@@ -1,11 +1,9 @@
 package com.mobyle.recyclerviewexoplayer.presentation.feed.adapter
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
-import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer

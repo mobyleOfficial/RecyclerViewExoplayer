@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690a5ce2-738c-4081-ba5e-fdf31b68eda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/FeedFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/FeedFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/adapter/FeedAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/adapter/FeedAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/adapter/FeedViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobyle/recyclerviewexoplayer/presentation/feed/adapter/FeedViewHolder.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

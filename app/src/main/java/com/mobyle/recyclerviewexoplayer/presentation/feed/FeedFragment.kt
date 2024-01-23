@@ -1,6 +1,5 @@
 package com.mobyle.recyclerviewexoplayer.presentation.feed
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
