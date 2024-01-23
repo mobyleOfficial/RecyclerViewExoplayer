@@ -9,7 +9,7 @@ O projeto completo está disponível na branch "main" e pode ser rodada na últi
 
 ## Links importante
 [Artigo do Medium]()
-[Curso no Youtube]()
+[Curso no Youtube](https://www.youtube.com/watch?v=56ar4i99luA&list=PL93Gh1U_cbRvp9rXxo3doPgp5mCnOK-yJ)
 
 ## Author
 Bruno Abe
