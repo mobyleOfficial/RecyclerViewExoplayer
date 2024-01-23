@@ -63,20 +63,9 @@ class FeedViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHo
                     player = it
                     player?.addListener(
                         @UnstableApi object : Player.Listener {
-                            override fun onIsPlayingChanged(isPlaying: Boolean) {
-
-                            }
-
-                            override fun onRenderedFirstFrame() {
-                                super.onRenderedFirstFrame()
-
-                            }
-
                             override fun onPlaybackStateChanged(playbackState: Int) {
                                 when (playbackState) {
                                     Player.STATE_READY -> {
-                                        // do something
-                                        Log.d("HelpMe", "Starting")
                                         binding.ivThumbnail.visibility = View.GONE
                                     }
 
@@ -86,10 +75,6 @@ class FeedViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHo
 
                                     else -> {} // no-op
                                 }
-                            }
-
-                            override fun onPlayerError(error: PlaybackException) {
-                                Log.d("HelpMe", error.toString())
                             }
                         }
                     )

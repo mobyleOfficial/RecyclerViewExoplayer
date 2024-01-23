@@ -56,6 +56,10 @@ class FeedFragment : Fragment() {
 
         initializeRecyclerView()
 
+        binding.btnError.setOnClickListener {
+            viewModel.getFeed()
+        }
+
         viewModel.uiState.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 when (state) {

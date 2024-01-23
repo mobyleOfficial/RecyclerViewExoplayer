@@ -10,7 +10,6 @@ import com.mobyle.recyclerviewexoplayer.presentation.feed.model.FeedPartialBindi
 
 class FeedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var items: MutableList<FeedPartialBindingPayload> = mutableListOf()
-    var player: ExoPlayer? = null
     private var shouldForcePartialBind = true
 
     fun setNewData(newItems: List<Post>) {
@@ -26,9 +25,8 @@ class FeedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     post = currentPost.post,
                     exoPlayer = exoPlayer
                 )
-           // player = exoPlayer
 
-            notifyItemChanged(position, exoPlayer)
+            notifyItemChanged(position, items[position])
         }
     }
 
@@ -65,8 +63,8 @@ class FeedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
 
             else -> {
-                (payloads[0] as? ExoPlayer)?.let {
-                    (holder as FeedViewHolder).playVideo(it)
+                (payloads[0] as? FeedPartialBindingPayload)?.let {
+                    (holder as FeedViewHolder).playVideo(it.exoPlayer)
                 }
             }
         }
