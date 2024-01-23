@@ -1,7 +1,6 @@
 package com.mobyle.recyclerviewexoplayer.presentation.feed.adapter
 
 import android.annotation.SuppressLint
-import android.os.Handler
 import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
@@ -14,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.mobyle.recyclerviewexoplayer.databinding.ItemPostBinding
 import com.mobyle.recyclerviewexoplayer.domain.model.Post
-import kotlinx.coroutines.delay
 
 class FeedViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {

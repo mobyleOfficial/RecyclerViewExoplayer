@@ -1,12 +1,11 @@
 package com.mobyle.recyclerviewexoplayer.data.remote.feed
 
 import com.mobyle.recyclerviewexoplayer.data.remote.model.PostListingResponse
-import com.mobyle.recyclerviewexoplayer.data.remote.model.PostRemoteResponse
-import retrofit2.Retrofit
 import javax.inject.Inject
 
 class FeedRemoteDataSourceImpl @Inject constructor(private val api: FeedApi) :
     FeedRemoteDataSource {
+    // If you want to try HLS videos use this
     private val hlsVideosUrl =
         listOf(
             "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
@@ -15,9 +14,9 @@ class FeedRemoteDataSourceImpl @Inject constructor(private val api: FeedApi) :
 
         )
 
-    override suspend fun getFeed(page: Int): PostListingResponse {
+    override suspend fun getFeed(): PostListingResponse {
 
-        api.getVideos(page).body()?.let {
+        api.getVideos(0).body()?.let {
             val mappedPosts = it.data.posts.map { post ->
                 val newVideo = post.video//.copy(mediaUrl = hlsVideosUrl.random())
                 post.copy(video = newVideo)

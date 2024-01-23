@@ -3,7 +3,6 @@ package com.mobyle.recyclerviewexoplayer.data.remote.di
 import com.mobyle.recyclerviewexoplayer.data.remote.feed.FeedApi
 import com.mobyle.recyclerviewexoplayer.data.remote.feed.FeedRemoteDataSource
 import com.mobyle.recyclerviewexoplayer.data.remote.feed.FeedRemoteDataSourceImpl
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

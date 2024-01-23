@@ -4,5 +4,5 @@ import com.mobyle.recyclerviewexoplayer.domain.repository.FeedRepository
 import javax.inject.Inject
 
 class GetFeed @Inject constructor(private val repository: FeedRepository) {
-    suspend fun invoke(page: Int) = repository.getFeed(page)
+    suspend fun invoke() = repository.getFeed()
 }
